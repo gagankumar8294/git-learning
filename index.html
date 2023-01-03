@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Installing Git & setup</title>
+</head>
+<body>
+	<h1>after installing Git</h1>
+	<p>1. open Command Line</p>
+	<img src="check.png"></img>
+	<h2>setup username and password</h2>
+	<h2>Now walk-in through few command-line commands we we're going to use in this series</h2>
+	<p>1. cd ..</p>
+	<p>2. ls </p>
+	<p>3. mkdir filename</p>
+	<p>touch filename</p>
+	<p>rm filename</p>
+	<p>code .</p>
+	<p>rmdir folder</p><br>
+	<br>
+	<h1> Creating a git repo</h1>
+	<p>Step: 1</p>
+	<img src="git-init.png"></img>
+	<p>after git-init</p>
+	<p>create a filename index.html</p>
+	<p>you can see that is in Green color, that mean</p>
+	<p>That is a new file, something new it is indicating</p>
+	<img src="green.png"></img>
+	<p>gittwo folder</p>
+	<p>it is in green</p>
+	<img src="gittwo-aswell.png"></img>
+	<br>
+	<h1>Stating repo</h1>
+	<img src="modified-area.png"></img>
+	<p>we we're just in modified area</p>
+	<p>green represents waiting for commit</p>
+	<p>which files have changed & which files are in stagging area</p>
+	<img src="changed.png"></img>
+	<p>untracked files[not stagged] are in red color</p>
+	<img src="git-add.png"></img>
+	<p>u can see after git add | git satus</p>
+	<p>new file in green color</p>
+	<p>so, that mean you are ready to commit the files that you added</p>
+	<p>so some times you add files to the stagging area BY MISTAKE</p>
+	<p>if we want to remove those from stagging area</p>
+	<img src="un-stage.png"></img>
+	<h1> use <strong>"git add ."</strong>when you want to add more files at a time</h1>
+	<img src="git-add-multi.png"></img>
+	<p>it will add every single modified to the stagging area</p>
+	<h2>Purpose of <strong>Staging area</strong></h2>
+	<p>1. extra layer of security</p>
+	<p>it will allows us to review changes in satging , before commit</p>
+	<p>ex:- i solved 2 bugs , to represent seperately</p>
+	<p>we commit it two times,,it allws us to split-up the work at this point</p>
+	<p>seperate-differet changes for seperate different commits</p>
+
+	<p>use git commit & with a flag message "for feature reference"</p>
+	<img src="git-commit.png"></img>
+	<p>u can see the ID of the commit</p>
+	<p>2 files and number of lines of code added,insertion is displayed</p>
+	<h1>See the CHANGES YOU MADE</h1>
+	<img src="git-log.png"></img>
+	<p>use <strong>git log --oneline</strong> to display in short lines</p>
+	<img src="git-log--oneline.png"></img>
+	<h2>Checking the changes what we made</h2>
+	<p>you can see h1 & p tag in index.html disappeared inside bosy tag</p>
+	<img src="git-checkout.png"></img>
+	<p>going back in time and seeing what are all the things how it looks at that commit</p>
+	<p>it basically detatch the changes from these,</p>
+	<p>to attach again , </p>
+	<h2>type git checkout master</h2>
+	<p>you will get back to current files</p>
+	<img src="git-checkout-master.png"></img>
+	<p>now you can see h1 & p tags are appeared on the index.html body</p>
+	<img src="git-revert1.png"></img>
+	<h2>click <strong>shift + :wq</strong> click enter to exit from this scary screen</h2>
+	<img src="git-revert2.png"></img>
+	<img src="git-revert3.png"></img>
+	<p>now wjht we did is , we removed that file</p>
+	<p>and when you type<strong>git log --oneline</strong></p>
+	<p>you can see that file still exist</p>
+	<p>we just not considering that file to our project</p>
+	<p>basically that option is to undone the feature of that commit , what we added</p>
+	<p>still we have access to that in the history, but we just reverted</p>
+	<h1>RESET OPTION</h1>
+	<p>GO back intime, take that code into this point intime , </p>
+	<p>and just work from there again</p>
+	<p>Now i can see only last 2 updates in log</p>
+	<p>last two updates are removed</p>
+	<p>but all commit are added in one </p>
+	<p>or in other words just commits{changes of single updated} removed</p>
+	<p>But progress what is exist upto the point is available</p>
+	<h2>To permanently delete</h2>
+	<p>if we want to rewind in time</p>
+	<img src="reset.png"></img>
+	<img src="reset-hard.png"></img>
+	<p>in styles the css lines are removed</p>
+	<img src="git-reset1.png"></img>
+	<img src="git-reset2.png"></img>
+	<h1>Removed everything</h1>
+	<img src="removed-everything.png"></img>
+	<h1>Branching</h1>
+	<h2>setting up our testing code in an isolated environment</h2>
+	<p>Rather than directly updating it on main branch</p>
+	<p></p>
+	<img src="git-branch.png"></img>
+	<p>changing branch and <strong>Creating branch</strong></p>
+	<p>To create branch<strong>git branch feture-1</strong></p>
+	<img src="git-branch1.png"></img>
+	<img src="git-feature1.png"></img>
+	<img src="git-feature2.png"></img>
+	<img src="git-feature3.png"></img>
+	<p>we can see that file is disapearing</p>
+	<p>while changing branch from feature to master</p>
+	<p>Cuz we we're doing changes in featurre-1 branch, it is isolated</p>
+	<p>he master branch has no relation with that</p>
+	<h1>CREATING BRANCH and working</h1>
+	<h2>After creating branch , <br>
+		<br>then you want to create file <strong>"feature-a"</strong></h2>
+	<img src="branch-navigate.png"></img>
+	<h1>checking out branches | working with MULTIPLE Branch</h1>>
+	<img src="git-checkout-branches.png"></img>
+	<h2>create another branch <strong>"feature-b"</strong></h2>
+	<p>to create & checkout <strong>only one command</strong></p>
+	<p>git checkout -b feature-b</p>
+	<img src="branch-create-checkout.png"></img>
+	<img src="feature-b.png"></img>
+	<img src="2-branches.png"></img>
+	<p>now we can see we we're working in different branches</p>
+	<p><strong>Main MASTER BRANCH is not affected[updated]</strong></p>
+	<p>untill we merge branches</p>
+	<h1>MERGING BRANCHES | DEALING WITH CONFLICTS</h1>
+	<p>merging, frature-a & feature-b to the master branch</p>
+	<img src="merge.png"></img>
+	<h1>PUSH CODE TO GITHUB</h1>
+	<img src="push-code.png"></img>
+	<p>create a <strong>Repo in github</strong></p>
+	<p>copy HTTPS code </p>
+	<p>open terminal</p>
+	<p>Navigate to project folder[gitone]</p>
+	<p>make sure all changes to be commited and merged to master</p>
+	<p>go to master branch</p>
+	<p>git push <strong>"url you copied"</strong>master</p>
+	<p>master is for where you are going to push, <strong>i.e. master branch</strong></p>
+	<img src="push-code.png"></img>
+	<p>push code successfull</p>
+	<img src="push-github.png"></img>
+	<h2>Now we make some changes and push that,ok, let's do that</h2>
+	<img src="push-commit.png"></img>
+	<p>after commit all the changes</p>
+	<h2>instead of pushing code again & again to HTTP url</h2>
+	<img src="cool.png"></img>
+	<p>insted we setup a <strong>Alies</strong>in this repo, what URL gonnabe</p>
+	<h2> so the way we can do that is by </h2>
+	<img src="alies-setup.png"></img>
+	<h2>simple code to push</h2>
+	<img src="push-finally.png"></img>
+	<p>finally commits</p>
+	<img src="github-finally.png"></img>
+	<p>Oe way of doing push</p>
+	<h1>Another way to Push code By cloning method</h1>
+	<img src="creating-repo.png"></img>
+	<h2>for this time, i select readme button</h2>
+	<p>cuz, creating from scratch, ot existing anything on my computer</p>
+	<p>to sync , when i clone it and download , it will download this <strong>READ.me</strong>file as well</p>
+	<p>so everything is gonna be in sync</p>
+	<img src="crap-portfolio.png"></img>
+	<img src="copy-url.png"></img>
+	<h2>go to the empty directry</h2>
+	<p>type this code</p>
+	<img src="clone.png"></img>
+	<img src="cloned-successfully.png"></img>
+	<p>cloned successfull</p>
+	<h2>if we wan to do changes and push</h2>
+	<h2>Changes commited</h2>
+	<img src="changes-commited.png"></img>
+	<p>for Previous method we used alies to push</p>
+	<img src="only-git-push.png"></img>
+	<img src="push-result-seen.png"></img>
+	<p>just type <strong>git push</strong></p>
+
+</body>
+</html>
